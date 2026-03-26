@@ -11,7 +11,7 @@ s[BACKSPACE]is
 [ENTER]
 muhammad 
 [ENTER]
-abdyllah ismai'
+abdullah ismai'
 [ENTER]
 asdasd ok w[BACKSPACE][BACKSPACE][BACKSPACE][BACKSPACE][BACKSPACE][BACKSPACE][BACKSPACE][BACKSPACE][BACKSPACE][BACKSPACE][BACKSPACE]
 ==================================================
@@ -22,5 +22,4 @@ defauly[BACKSPACE]t
 [ENTER]
 gaming
 [ENTER]
-ghazh1.2[SHIFT]$
 [ENTER]

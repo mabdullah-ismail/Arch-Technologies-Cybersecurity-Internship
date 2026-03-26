@@ -1,0 +1,41 @@
+Common Prots in a Network Sniffer:
+| Port | Protocol | Service |
+|------|----------|---------|
+| 20 | TCP | FTP Data Transfer |
+| 21 | TCP | FTP Control |
+| 22 | TCP | SSH (Secure Remote Login) |
+| 23 | TCP | Telnet (Unsecure Remote Login) |
+| 25 | TCP | SMTP (Sending Email) |
+| 53 | UDP/TCP | DNS (Website Name Lookup) |
+| 67 | UDP | DHCP Server (IP Assignment) |
+| 68 | UDP | DHCP Client |
+| 80 | TCP | HTTP (Unsecured Website) |
+| 110 | TCP | POP3 (Receiving Email) |
+| 143 | TCP | IMAP (Email Sync) |
+| 443 | TCP | HTTPS (Secured Website) |
+| 3306 | TCP | MySQL Database |
+| 3389 | TCP | RDP (Windows Remote Desktop) |
+| 5432 | TCP | PostgreSQL Database |
+| 6379 | TCP | Redis |
+| 8080 | TCP | HTTP Alternate / Dev Servers |
+| 8443 | TCP | HTTPS Alternate |
+| 27017 | TCP | MongoDB Database |
+
+TCP handshakes:
+a 3 step handshake is made everytime our browser connects to a website i.e
+Your PC  →  SYN      →  Server  
+Your PC  ←  SYN-ACK  ←  Server   
+Your PC  →  ACK      →  Server   
+
+Spot a port scan attack:
+TCP | 192.168.1.10:1234 -> 192.168.1.1:22
+TCP | 192.168.1.10:1234 -> 192.168.1.1:23
+TCP | 192.168.1.10:1234 -> 192.168.1.1:80
+TCP | 192.168.1.10:1234 -> 192.168.1.1:443
+One IP hitting many ports rapidly = someone scanning your network. Security teams use sniffers to detect exactly this.
+
+Understanding DNS:
+When you type google.com, your computer first asks "what is Google's IP address?" — this is called a DNS request and uses UDP port 53.
+Run your sniffer and open any website. You'll see:
+UDP | 192.168.1.5:54321 -> 8.8.8.8:53
+That 8.8.8.8 is Google's DNS server. Your computer is asking it to translate google.com into an IP address. 
